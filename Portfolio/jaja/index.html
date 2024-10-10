@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+     <meta charset="UTF-a">
+     <meta http-equiv="X-UA-Compatible" content="IE-edge">
+     <meta name="viewport" content="width-device-width, initial-scale=1.0">
+     <title>Personal Portfolio Website</title>
+     <link rel="stylesheet" href="style.css">
+</head>
+<nav>
+    <img src="images/logo1.png" class="logo">
+<ul>
+    <li><a href="#header">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#hobbies">Hobbies</a></li>
+    <li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+<body>
+<div id="header"></div>
+     <div class="container">
+    <nav>
+          
+    </nav>
+</div>
+<!-- ---------about-------- -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/jasmine.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p> Hello I'm Jasmine Derla 18 years old from Dasmarinas City Cavite.</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('background')">Background</p>
+                    <p class="tab-links" onclick="opentab('awards/achievements')">Awards/Achievements</p>
+                    <p class="tab-links" onclick="opentab('school')">School</p>
+                </div>
+                <div class="tab-contents active-tab" id="background">
+                    <ul>
+                        <li><span>Birthday</span><br> December 5, 2004</li>
+                        <li><span>Birthplace</span><br> Mulanay Quezon, Province</li>
+                        <li><span>Home Address</span><br> Blk 5 Lot 19 Sunny Crest Village, Brgy Salitran 2, Dasmariñas City Cavite</li>
+                        <li><span>Parents</span><br> Manolo and Analyn</li>
+                        <li><span>Siblings</span><br> Jhanna, Jaliyah and Mark Jaren</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="awards/achievements">
+                    <ul>
+                        <li><span>Grade 4</span><br> Yes-O 3rd place</li>
+                        <li><span>Grade 5</span><br> Lyre and Drum Band</li>
+                        <li><span>Grade 7</span><br> Conduct Award</li>
+                        <li><span>Grade 8</span><br> Conduct Award</li>
+                        <li><span>Grade 9</span><br> Conduct Award, Top 5 and Top 3</li>
+                        <li><span>Grade 12</span><br> Top 8</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="school">
+                    <ul>
+                        <li><span>Elementary</span><br> Salitran Elementary School</li>
+                        <li><span>Highschool</span><br> Congressional Integrated Highschool</li>
+                        <li><span>Senior High</span><br> Congressional Integrated Highschool</li>
+                        <li><span>College</span><br> Kolehiyo ng Lungsod ng Dasmariñas</li>
+                       
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- --------hobbies---------- -->
+<div id="hobbies">
+    <div class="row">
+    <div class="container">
+        <h1 class="subtitle">My Hobbies</h1>
+        <div class="hobbies-list">
+            
+            <div>
+                <img src="images/komi2.png">
+                <h2>Anime</h2>
+                <p>Loves to watch anime because it<br> provides entertainment and fun.</p>
+                <a href="#">Learn more....</a>
+            </div>
+            <div>
+                <img src="images/scarlet.png">
+                <h2>Sleep</h2>
+                <p>When I'm done watching anime <br>I immediately watch kdrama or jdrama.</p>
+                <a href="#">Learn more....</a>
+            </div>
+            <div>
+                <img src="images/eat.png">
+                <h2>Eat</h2>
+                <p>After watching a long time I immediately eat sweet, spicy, salty, hot and cold food straight away.</p>
+                <a href="#">Learn more....</a>
+             </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ----------contact----------- -->
+<div id="contact">
+    <div class="container">
+        <div class="contact-list">
+           <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">My Contact</h1>
+                <p>📞<span>Contact #;</span> 09476250562</p>
+                <p>📧<span>Email-address;</span> derla.jasmineg.kld@gmail.com</p>
+                <p>📱<span>Facebook Link;</span> https://www.facebook.com/jasmine.derla.5</p>
+                <p>📸<span>Instagram Link;</span> https://instagram.com/jsmndrl_05</p>
+            </div>
+               
+            <div class="contact-right">
+                <form >
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+           </div>
+           <a href="images/labexam.pdf" download class="btn btn2">Download</a>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Jasmine. Made with Love 💙</p>
+    </div>
+</div>
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    
+    function opentab(tabname) {
+        for(tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+</body>
+</html>
